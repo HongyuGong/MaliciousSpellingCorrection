@@ -1,5 +1,5 @@
 ***************************************************************************************************************************
-This repository is currently under reconstruction, and we are refactoring the code for higher efficiency and better readability.
+This repository is currently under reconstruction, and we are refactoring the code for higher efficiency and better readability. We will provide detailed running instructions of our system.
 ***************************************************************************************************************************
 
 
@@ -13,6 +13,8 @@ Code structure:
 5. spam/: the module on error generation and correction on spam data.
 
 If you have any questions, please contact Hongyu Gong (hgong6@illinois.edu).
+
+
 If you use our code, please cite our work:
 Hongyu Gong, Yuchen Li, Suma Bhat, Pramod Viswanath. 2019. Context-Sensitive Malicious Spelling Error Correction. In \emph{Proceedings of the 2019 World Wide Web Conference (WWW'19), May 13-17, 2019, San Francisco, CA, USA.
 
