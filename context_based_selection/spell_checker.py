@@ -3,12 +3,12 @@ spell checker
 """
 import argparse
 import codecs
-from context_based_selection.context_score import scoreWord
+#from context_based_selection.context_score import scoreWord
 import os
 import difflib
 from nltk.corpus import words
 from context_based_selection.vocab import Vocab
-from context_based_selection.context_score import cosSim
+#from context_based_selection.context_score import cosSim
 import numpy as np
 from domain_corpus_generation.corpus_util import loadDict
 from preprocess.regular_check import rawCheck, rawCheckOnDist
@@ -68,6 +68,11 @@ def getCandFromDict(word):
     #print "cand_words", cand_words
     return sort_words, sort_freq
 
+
+def cosSim(array1, array2):
+        if (np.linalg.norm(array1) * np.linalg.norm(array2)) == 0:
+                return 0
+        return np.dot(array1, array2) / (np.linalg.norm(array1) * np.linalg.norm(array2))
 
 
 def getRelevance(X, w):
