@@ -12,8 +12,16 @@ Code structure:
 4. perspective_evaluation/: the module to run baselines spell checkers on Perspective data;
 5. spam/: the module on error generation and correction on spam data.
 
-If you have any questions, please contact Hongyu Gong (hgong6@illinois.edu).
+Data you may need to run spell_checker.py
+1. vocab.txt: https://drive.google.com/open?id=1S2jHg7H-XZmL4QHBVEGhCK7TLSq3FOx3
+2. vectors.bin: https://drive.google.com/open?id=1zZ49o8OxZ2nPpejkKtyxlOwiDM0zs-QK
+3. dict_v1.pkl: https://drive.google.com/open?id=1X4yGKC74AFn8DaminEz8e-kj70Wju3U8
+4. persective_train_dict.pickle: https://drive.google.com/open?id=1ytt2J83Is2t__-wDzO9b9wZJEFvTc9on
 
+Put those files in the right path as shown in spell_checker.py
+
+
+If you have any questions, please contact Hongyu Gong (hgong6@illinois.edu).
 
 If you use our code, please cite our work:
 Hongyu Gong, Yuchen Li, Suma Bhat, Pramod Viswanath. 2019. Context-Sensitive Malicious Spelling Error Correction. In \emph{Proceedings of the 2019 World Wide Web Conference (WWW'19), May 13-17, 2019, San Francisco, CA, USA.
