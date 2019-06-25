@@ -11,7 +11,7 @@ from context_based_selection.vocab import Vocab
 #from context_based_selection.context_score import cosSim
 import numpy as np
 from domain_corpus_generation.corpus_util import loadDict
-from preprocess.regular_check import rawCheck, rawCheckOnDist
+from regular_check import rawCheckOnDist
 import editdistance
 from pyxdameraulevenshtein import damerau_levenshtein_distance as dist
 
@@ -196,7 +196,7 @@ def generateAlgoCandCorrection(sent_str_list, context_size=4):
     revised_corrections = []
     cand_corrections = []
     # stage 1: context-free check
-    sent_token_list, corrections = rawCheckOnDist(sent_str_list, corpus, small_corpus) # rawCheck(sent_str_list)
+    sent_token_list, corrections = rawCheckOnDist(sent_str_list, corpus, small_corpus)
 
     # stage 2: context-dependent check
     corrections2 = []
