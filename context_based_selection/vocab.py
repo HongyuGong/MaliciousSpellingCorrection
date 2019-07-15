@@ -91,15 +91,17 @@ class Vocab:
                                 """
                                 return a list of indices of word_list
                                 """
+                                selected_word_list = []
                                 wordId = []
                                 for word in word_list:
                                         if (word in self.funcWords):
                                                 continue
                                         try:
                                                 wordId.append(self.vocabIndex[word])
+						selected_word_list.append(word)
                                         except:
                                                 pass
-                                return wordId
+                                return selected_word_list, wordId
                                         
 
 	def getContextIdList(self, contexts):
@@ -131,7 +133,7 @@ class Vocab:
 
 	def getVectors(self, word_list):
 		#vecDim = self.vecDim
-		idxList = self.getWordIdList(word_list)
+		selected_word_list, idxList = self.getWordIdList(word_list)
 
 		#print "debugging", "idxList:", idxList
 		vecList = []
@@ -145,6 +147,6 @@ class Vocab:
                     vecList.append(vecs)
 
 		#print "debugging", "vecList:", vecList
-                return vecList
+                return selected_word_list, vecList
                                     
                         
