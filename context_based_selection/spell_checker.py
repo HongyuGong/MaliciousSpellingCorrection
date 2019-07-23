@@ -7,22 +7,25 @@ import codecs
 import os
 import difflib
 from nltk.corpus import words
-from context_based_selection.vocab import Vocab
+#from context_based_selection.vocab import Vocab
+from vocab import Vocab
 #from context_based_selection.context_score import cosSim
 import numpy as np
-from domain_corpus_generation.corpus_util import loadDict
+import sys
+#from domain_corpus_generation.corpus_util import loadDict
 from regular_check import rawCheckOnDist
 import editdistance
 from pyxdameraulevenshtein import damerau_levenshtein_distance as dist
+sys.path.insert(0, '../domain_corpus_generation/')
+from corpus_util import loadDict
 
-
-corpus = loadDict(fn="domain_corpus_generation/dict_v1.pickle", freq_threshold=100)
+corpus = loadDict(fn="../domain_corpus_generation/dict_v1.pickle", freq_threshold=100)
 small_corpus = corpus
-train_corpus = loadDict(fn="domain_corpus_generation/persective_train_dict.pickle", freq_threshold=5)
+train_corpus = loadDict(fn="../domain_corpus_generation/persective_train_dict.pickle", freq_threshold=5)
 
 
 vecDim = 300
-embedding_directory = "SpellingCorrection/domain_corpus_generation/embeddings/"
+embedding_directory = "../domain_corpus_generation/embeddings/"
 vocabInputFile = "vocab.txt"
 vectorInputFile = "vectors.bin"
 isFunctional = 1
@@ -279,6 +282,13 @@ def evalCorrections(gold_corrections, algo_corrections, cand_corrections, error_
 
 
 if __name__=="__main__":
+
+    error_sent_list = ["he is stupd", "ugly gilr"]
+    revised_sent_seq, algo_corrections, cand_corrections = generateAlgoCandCorrection(error_sent_list)
+    print("revised sent seq:")
+    print(revised_sent_seq)
+
+    """
     error_type_list = ["add", "delete", "permute", "replace", "separate"]
     parser = argparse.ArgumentParser()
     parser.add_argument('--errorType', default="add", type=str)
@@ -302,6 +312,6 @@ if __name__=="__main__":
 
     # evaluate
     evalCorrections(gold_corrections, algo_corrections, cand_corrections, error_type)
-
+    """
     
 
