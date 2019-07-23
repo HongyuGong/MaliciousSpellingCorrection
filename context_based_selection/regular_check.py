@@ -4,7 +4,7 @@ regular_check.py
 """
 from pyxdameraulevenshtein import damerau_levenshtein_distance as dist
 
-def getCandFromDict(word, raw_corpus, refined_corpus):
+def getCandFromDict(word, refined_corpus):
     """
     use edit distance to generate candidates
     input: word
