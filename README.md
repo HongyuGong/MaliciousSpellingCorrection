@@ -13,8 +13,8 @@ This is the system for the paper "Context-Sensitive Malicious Spelling Error Cor
 5. spam/: the module on error generation and correction on spam data.
 
 ## Data you may need to run spell_checker.py
-1. vocab.txt: 
-2. vectors.bin: 
+1. vocab.txt: https://drive.google.com/open?id=17skRsxTswYi7D66FJoq2n8igOqYUFUah
+2. vectors.bin: https://drive.google.com/open?id=1tYzrOJ31u81JxO00_MB5DK8f9zTDwnuh
 3. dict_v1.pkl: https://drive.google.com/open?id=1VzT9u0YdhRcwSAN1vauA63ryvN0E_mJC
 4. persective_train_dict.pickle: https://drive.google.com/open?id=1nfl0znt-oO8XK6yUIZ7hLjSltcRcmuqs
 
